@@ -81,7 +81,7 @@ provider "kubernetes" {
     host                   = module.k8s_cluster_azure.host
     client_key             = base64decode(module.k8s_cluster_azure.client_key)
     client_certificate     = base64decode(module.k8s_cluster_azure.client_certificate)
-    cluster_ca_certificate = base64decode(module.k8s_cluster_azure.client_certificate)
+    cluster_ca_certificate = base64decode(module.k8s_cluster_azure.cluster_ca_certificate)
 }
 
 provider "helm" {
@@ -89,6 +89,6 @@ provider "helm" {
     host                   = module.k8s_cluster_azure.host
     client_key             = base64decode(module.k8s_cluster_azure.client_key)
     client_certificate     = base64decode(module.k8s_cluster_azure.client_certificate)
-    cluster_ca_certificate = base64decode(module.k8s_cluster_azure.client_certificate)
+    cluster_ca_certificate = base64decode(module.k8s_cluster_azure.cluster_ca_certificate)
   }
 }
