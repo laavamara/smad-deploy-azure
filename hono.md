@@ -27,7 +27,7 @@ Create tenant, add device, add credentials, start receiver, publish telemetry:
    it's possible you don't get "ok" response but it should still work 
 
 7. open new terminal but do not close previous terminal so you don't lose env vars, run:
-   `export AMQP_NETWORK=<hono dispatch router-ext address from kubectl get services>`
+   `export AMQP_NETWORK_IP=<hono dispatch router-ext address from kubectl get services>`
    `export MY_TENANT=<tenant you got earlier>`
 
 8. in folder where hono cli jar is located run (requires jdk 11 or higher):
